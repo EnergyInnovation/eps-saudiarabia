@@ -1,0 +1,13 @@
+,government,nonenergy industries,labor and consumers,foreign entities,electricity suppliers,coal suppliers,natural gas and petroleum suppliers,biomass and biofuel suppliers,other energy suppliers
+Cement and other carbonate use,0.0028,0.5001,0.1878,0.1561,0,0,0,0,0
+Natural gas and petroleum systems,0.1434,0.0437,0.0523,0.0006,0,0,0,0,0
+Iron and steel,-0.0006,0.3288,0.2640,0.3089,0,0,0,0,0
+Chemicals,0.0027,0.4889,0.1402,0.1289,0,0,0,0,0
+Coal mining,0,0.000,0.000,0.000,0,0,0,0,0
+Waste management,0,0,0,0,0,0,0,0,0
+Agriculture,-0.3986,0.4980,0.6357,0.1361,0,0,0,0,0
+Other industries,0.0046,0.4327,0.2405,0.2315,0,0,0,0,0
+,,,,,,,,,
+,,,,,,,,,
+"These rows are intended to sum to less than one, as they are inputs as a share of gross output (e.g. ignoring value added)",,,,,,,,,
+"These are shares of non-energy inputs, so we assign zeroes to all energy supplier cash flow entities.",,,,,,,,,
