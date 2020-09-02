@@ -1,0 +1,10 @@
+Image Credits
+-------------
+
+Riyadh Skyline
+B.alotaby
+https://commons.wikimedia.org/wiki/File:Riyadh_Skyline.jpg
+License: Creative Commons Attribution-Share Alike 4.0 International
+
+Changes:
+Image has been cropped and a fade has been applied to the left side.
