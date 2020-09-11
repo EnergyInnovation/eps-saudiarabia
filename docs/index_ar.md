@@ -18,4 +18,4 @@ title:  "محاكي سياسة الطاقة بالمملكة العربية ال
 ## معلومات أخرى
 
 * [شكر المساهمين](acknowledgement_ar.html)
-* [معلومات ترخيص البرنامج](software-license_ar.html)
+* [ترخيص البرنامج وائتمانات الصورة](software-license_ar.html)
