@@ -7,13 +7,13 @@ The Saudi Arabia Energy Policy Simulator (EPS) is a free and open-source compute
 
 ## Model Download
 
-The Saudi Arabia Energy Policy Simulator may be used on this website through your web browser, or the full version may be downloaded to your computer by clicking the button below. Note that you will need to go through the steps explained on the [EPS download page](https://us.energypolicy.solutions/docs/download.html) in order to install the required software and make use of the full version of the model.
+The Saudi Arabia Energy Policy Simulator may be used on this website through your web browser, or the full version may be downloaded to your computer by clicking the button below. Note that you will need to go through the steps explained on the [EPS download page](https://docs.energypolicy.solutions/download) in order to install the required software and make use of the full version of the model.
 
 <p><a href="https://github.com/Energy-Innovation/eps-saudiarabia/archive/2.0.0.zip" class="btn">Download the Saudi Arabia Energy Policy Simulator</a></p>
 
 ## Documentation
 
-Documentation of the model is available [here](https://us.energypolicy.solutions/docs/index.html).  Documentation is not specific to any model version and therefore applies to both U.S. and Saudi Arabia versions of the Energy Policy Simulator.
+Documentation of the model is available [here](https://docs.energypolicy.solutions/).  Documentation is not specific to any model version and therefore applies to both U.S. and Saudi Arabia versions of the Energy Policy Simulator.
 
 ## Other Information
 
