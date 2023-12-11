@@ -14323,6 +14323,8 @@ Vehicle Technology:
 	~	
 	~		|
 
+DD Vehicle Technology <-> Vehicle Technology ~~|
+
 Perc Change in Fuel Cost per Unit Cargo Dist[Vehicle Type,Cargo Type]=
 	ZIDZ(
 	  (Weighted Avg Fuel Cost per Unit Cargo Dist by Vehicle Type[Vehicle Type,Cargo Type\
@@ -17794,111 +17796,111 @@ MCGLT Max Capacity Growth Lookup Table[hard coal es]=
 	   '1',
 	   'C2'
 	) ~~|
-MCGLT Max Capacity Growth Lookup Table[natural gas nonpeaker es](
+MCGLT Max Capacity Growth Lookup Table[natural gas nonpeaker es] =
 	GET DIRECT LOOKUPS(
 	   'InputData/elec/MCGLT/MCGLT.csv',
 	   '',
 	   '3',
 	   'C4'
-	)) ~~|
-MCGLT Max Capacity Growth Lookup Table[nuclear es](
+	) ~~|
+MCGLT Max Capacity Growth Lookup Table[nuclear es] =
 	GET DIRECT LOOKUPS(
 	   'InputData/elec/MCGLT/MCGLT.csv',
 	   '',
 	   '5',
 	   'C6'
-	)) ~~|
-MCGLT Max Capacity Growth Lookup Table[hydro es](
+	) ~~|
+MCGLT Max Capacity Growth Lookup Table[hydro es] =
 	GET DIRECT LOOKUPS(
 	   'InputData/elec/MCGLT/MCGLT.csv',
 	   '',
 	   '7',
 	   'C8'
-	)) ~~|
-MCGLT Max Capacity Growth Lookup Table[onshore wind es](
+	) ~~|
+MCGLT Max Capacity Growth Lookup Table[onshore wind es] =
 	GET DIRECT LOOKUPS(
 	   'InputData/elec/MCGLT/MCGLT.csv',
 	   '',
 	   '9',
 	   'C10'
-	)) ~~|
-MCGLT Max Capacity Growth Lookup Table[solar PV es](
+	) ~~|
+MCGLT Max Capacity Growth Lookup Table[solar PV es] =
 	GET DIRECT LOOKUPS(
 	   'InputData/elec/MCGLT/MCGLT.csv',
 	   '',
 	   '11',
 	   'C12'
-	)) ~~|
-MCGLT Max Capacity Growth Lookup Table[solar thermal es](
+	) ~~|
+MCGLT Max Capacity Growth Lookup Table[solar thermal es] =
 	GET DIRECT LOOKUPS(
 	   'InputData/elec/MCGLT/MCGLT.csv',
 	   '',
 	   '13',
 	   'C14'
-	)) ~~|
-MCGLT Max Capacity Growth Lookup Table[biomass es](
+	) ~~|
+MCGLT Max Capacity Growth Lookup Table[biomass es] =
 	GET DIRECT LOOKUPS(
 	   'InputData/elec/MCGLT/MCGLT.csv',
 	   '',
 	   '15',
 	   'C16'
-	)) ~~|
-MCGLT Max Capacity Growth Lookup Table[geothermal es](
+	) ~~|
+MCGLT Max Capacity Growth Lookup Table[geothermal es] =
 	GET DIRECT LOOKUPS(
 	   'InputData/elec/MCGLT/MCGLT.csv',
 	   '',
 	   '17',
 	   'C18'
-	)) ~~|
-MCGLT Max Capacity Growth Lookup Table[petroleum es](
+	) ~~|
+MCGLT Max Capacity Growth Lookup Table[petroleum es] =
 	GET DIRECT LOOKUPS(
 	   'InputData/elec/MCGLT/MCGLT.csv',
 	   '',
 	   '19',
 	   'C20'
-	)) ~~|
-MCGLT Max Capacity Growth Lookup Table[natural gas peaker es](
+	) ~~|
+MCGLT Max Capacity Growth Lookup Table[natural gas peaker es] =
 	GET DIRECT LOOKUPS(
 	   'InputData/elec/MCGLT/MCGLT.csv',
 	   '',
 	   '21',
 	   'C22'
-	)) ~~|
-MCGLT Max Capacity Growth Lookup Table[lignite es](
+	) ~~|
+MCGLT Max Capacity Growth Lookup Table[lignite es] =
 	GET DIRECT LOOKUPS(
 	   'InputData/elec/MCGLT/MCGLT.csv',
 	   '',
 	   '23',
 	   'C24'
-	)) ~~|
-MCGLT Max Capacity Growth Lookup Table[offshore wind es](
+	) ~~|
+MCGLT Max Capacity Growth Lookup Table[offshore wind es] =
 	GET DIRECT LOOKUPS(
 	   'InputData/elec/MCGLT/MCGLT.csv',
 	   '',
 	   '25',
 	   'C26'
-	)) ~~|
-MCGLT Max Capacity Growth Lookup Table[crude oil es](
+	) ~~|
+MCGLT Max Capacity Growth Lookup Table[crude oil es] =
 	GET DIRECT LOOKUPS(
 	   'InputData/elec/MCGLT/MCGLT.csv',
 	   '',
 	   '27',
 	   'C28'
-	)) ~~|
-MCGLT Max Capacity Growth Lookup Table[heavy or residual fuel oil es](
+	) ~~|
+MCGLT Max Capacity Growth Lookup Table[heavy or residual fuel oil es] =
 	GET DIRECT LOOKUPS(
 	   'InputData/elec/MCGLT/MCGLT.csv',
 	   '',
 	   '29',
 	   'C30'
-	)) ~~|
-MCGLT Max Capacity Growth Lookup Table[municipal solid waste es](
+	) ~~|
+MCGLT Max Capacity Growth Lookup Table[municipal solid waste es] =
 	GET DIRECT LOOKUPS(
 	   'InputData/elec/MCGLT/MCGLT.csv',
 	   '',
 	   '31',
 	   'C32'
-	))
+	)
 	~	MW
 	~		|
 
@@ -22341,7 +22343,7 @@ Fraction of Installation and System Integration Issues Remedied=
 	~	Dmnl [0,1]
 	~		|
 
-Recipient Vehicle Type<->
+AA Recipient Vehicle Type<->
 	Vehicle Type
 	~	
 	~		|
