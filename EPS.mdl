@@ -8083,7 +8083,7 @@ Change in Capital Equipment Supplier Cash Flow due to New EV Chargers=
 
 Vehicle Technology Priority Profile[Vehicle Type,Cargo Type,Vehicle Technology,ptype]\
 		=
-	13 {ptype: normal distribution, integer-only allocation} ~~|
+	3 {ptype: normal distribution, integer-only allocation} ~~|
 Vehicle Technology Priority Profile[Vehicle Type,Cargo Type,Vehicle Technology,ppriority\
 		]=
 	-NPV of Lifetime Vehicle Cost[Vehicle Type,Cargo Type,Vehicle Technology]
@@ -13388,7 +13388,7 @@ BAU Carbon Free Energy in Absence of LCFS by Vehicle Type[Vehicle Type,Cargo Typ
 
 BAU Vehicle Technology Priority Profile[Vehicle Type,Cargo Type,Vehicle Technology,ptype\
 		]=
-	13 ~~|
+	3 ~~|
 BAU Vehicle Technology Priority Profile[Vehicle Type,Cargo Type,Vehicle Technology,ppriority\
 		]=
 	-BAU NPV of Lifetime Vehicle Cost[Vehicle Type,Cargo Type,Vehicle Technology]
