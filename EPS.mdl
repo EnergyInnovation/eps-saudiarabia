@@ -1239,12 +1239,10 @@ BAU New Vehicle Price after Endogenous EV Learning[Vehicle Type,Cargo Type,Vehic
 		] :EXCEPT:   [Vehicle Type,Cargo Type
 ,battery electric vehicle]=
 	BNVP BAU New Vehicle Price[Vehicle Type,Cargo Type,Vehicle Technology] ~~|
+
 BAU New Vehicle Price after Endogenous EV Learning[Vehicle Type,Cargo Type,battery electric vehicle\
 		]=
-	GET DATA AT TIME(
-	  BNVP BAU New Vehicle Price[Vehicle Type,Cargo Type,battery electric vehicle],
-	  INITIAL TIME
-	)
+	Initial New EV Price[Vehicle Type,Cargo Type]
 	* (1 - SYBSoEVP Start Year Battery Share of Electric Vehicle Price
 	       * (1 - BAU This Year Battery Cost as Fraction of First Year Battery Cost)
 	  )
@@ -1258,6 +1256,11 @@ BAU New Vehicle Price after Endogenous EV Learning[Vehicle Type,Cargo Type,batte
 		p * [1 - (s - sf)]
 		p * [1 - s * (1 - f)]
 	|
+
+Initial New EV Price[Vehicle Type,Cargo Type]= INITIAL(
+	BNVP BAU New Vehicle Price[Vehicle Type,Cargo Type,battery electric vehicle])
+	~	$/vehicle
+	~		|
 
 BAU Minimum Required Sales Perc by Technology Type[Vehicle Type,Cargo Type,Vehicle Technology\
 		] :EXCEPT:  [Vehicle Type,Cargo Type,battery electric vehicle],[Vehicle Type,Cargo Type\
@@ -1448,10 +1451,7 @@ New Vehicle Price after Endogenous EV Learning[Vehicle Type,Cargo Type,Vehicle T
 	BNVP BAU New Vehicle Price[Vehicle Type,Cargo Type,Vehicle Technology] ~~|
 New Vehicle Price after Endogenous EV Learning[Vehicle Type,Cargo Type,battery electric vehicle\
 		]=
-	GET DATA AT TIME(
-	  BNVP BAU New Vehicle Price[Vehicle Type,Cargo Type,battery electric vehicle],
-	  INITIAL TIME
-	)
+	Initial New EV Price[Vehicle Type,Cargo Type]
 	* (1 - SYBSoEVP Start Year Battery Share of Electric Vehicle Price
 	       * (1 - This Year Battery Cost as Fraction of First Year Battery Cost)
 	  )
