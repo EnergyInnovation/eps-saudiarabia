@@ -1785,14 +1785,26 @@ Change in Fuel Use by Fuel and Technology due to LCFS with Elec Eff Adj[HDVs,Car
 	~	BTU
 	~		|
 
-Start Year Components Energy Use[Building Type,Building Fuel,Building Component] :EXCEPT:\
-		 [Building Type,Building Fuel,envelope]=
-	GET DATA AT TIME(BCEU BAU Components Energy Use[Building Type,Building Fuel,Building Component\
-		], INITIAL TIME - 1) ~~|
-Start Year Components Energy Use[Building Type,Building Fuel,envelope]=
-	0
-	~	BTU
-	~		|
+Start Year Components Energy Use[urban residential,Building Fuel,Building Component]=
+	GET DIRECT CONSTANTS(
+	   'InputData/bldgs/BCEU/SY-BCEU-urban-residential.csv',
+	   ',',
+	   'B2'
+	) ~~|
+
+Start Year Components Energy Use[rural residential,Building Fuel,Building Component]=
+	GET DIRECT CONSTANTS(
+	   'InputData/bldgs/BCEU/SY-BCEU-rural-residential.csv',
+	   ',',
+	   'B2'
+	) ~~|
+
+Start Year Components Energy Use[commercial,Building Fuel,Building Component]=
+	GET DIRECT CONSTANTS(
+	   'InputData/bldgs/BCEU/SY-BCEU-commercial.csv',
+	   ',',
+	   'B2'
+	) ~~|
 
 Quantity Carbon Free Energy May be Increased by Fuel by Regulated Vehicle Type[Vehicle Type\
 		,Cargo Type,Transportation Fuel] :EXCEPT: [Vehicle Type,Cargo Type,electricity tf],\
@@ -10343,11 +10355,16 @@ Percent Change in Fleet Avg Fuel Economy[Vehicle Type,Cargo Type,Vehicle Technol
 	~		|
 
 BAU Last Year Grid Battery Storage Capacity= DELAY FIXED (
-	BGrBSC BAU Grid Battery Storage Capacity, 1, GET DATA AT TIME(BGrBSC BAU Grid Battery Storage Capacity\
-		, INITIAL TIME - 
-1))
+	BGrBSC BAU Grid Battery Storage Capacity, 1, GBSC Start Year Grid Battery Storage Capacity)
 	~	MW
 	~		|
+
+GBSC Start Year Grid Battery Storage Capacity=
+  GET DIRECT CONSTANTS(
+    'InputData/elec/BGrBSC/SYGBSC.csv',
+    ',',
+    'B2'
+  ) ~~|
 
 Amount Spent on Grid Batteries=
 	New Grid Battery Storage Capacity * One Year
@@ -10404,7 +10421,7 @@ Grid Battery Storage Capacity=
 
 Grid Battery Storage Capacity Last Year= INTEG (
 	New Grid Battery Storage Capacity,
-		GET DATA AT TIME(BGrBSC BAU Grid Battery Storage Capacity, INITIAL TIME - 1))
+		GBSC Start Year Grid Battery Storage Capacity)
 	~	MW
 	~		|
 
@@ -17548,6 +17565,15 @@ BDEQ BAU Distributed Electricity Source Capacity[commercial,Electricity Source]:
 	~	MW
 	~		|
 
+Start Year BDEQ BAU Distributed Electricity Source Capacity[Building Type,Electricity Source\
+		]:INTERPOLATE::=
+	GET DIRECT CONSTANTS(
+	   'InputData/bldgs/BDEQ/SY-BDEQ-BDESC.csv',
+	   ',',
+	   '1',
+	   'B2*'
+	) ~~|
+
 Distributed Solar Capacity Factor x Hours per Year=
 	DSCF Distributed Solar Capacity Factor
 	* Hours per Year
@@ -17558,11 +17584,7 @@ Last Year BAU Distributed Electricity Source Capacity[Building Type,Electricity 
 		]= DELAY FIXED (
 	BDEQ BAU Distributed Electricity Source Capacity[Building Type,Electricity Source],
 	1,
-	GET DATA AT TIME(
-	  BDEQ BAU Distributed Electricity Source Capacity[Building Type,Electricity Source]\
-		,
-	  INITIAL TIME - 1
-	))
+	Start Year BDEQ BAU Distributed Electricity Source Capacity[Building Type,Electricity Source])
 	~	MW
 	~		|
 
