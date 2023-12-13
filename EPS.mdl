@@ -17180,11 +17180,10 @@ BDEQ BAU Distributed Electricity Source Capacity[commercial,Electricity Source]:
 	~		|
 
 Start Year BDEQ BAU Distributed Electricity Source Capacity[Building Type,Electricity Source\
-		]:INTERPOLATE::=
+		]=
 	GET DIRECT CONSTANTS(
 	   'InputData/bldgs/BDEQ/SY-BDEQ-BDESC.csv',
 	   ',',
-	   '1',
 	   'B2*'
 	) ~~|
 
